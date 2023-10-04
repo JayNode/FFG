@@ -7,9 +7,16 @@ const Navbar = () => {
   return (
     <>
       <nav>
+
+        {/* onClick:  n==0    -> setIsNavExpanded(false)
+                      n==Odd  -> setIsNavExpanded(true) 
+                      n==Even -> setIsNavExpanded(false) */}
         <button className="hamburger" onClick={() => {
           setIsNavExpanded(!isNavExpanded);
         }}></button>
+
+        {/* Logic:  isNavExpanded==true  -> className="nav-menu expanded"  
+                    isNavExpanded==false -> className="nav-menu" */}
         <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
           <ul>
             <li>

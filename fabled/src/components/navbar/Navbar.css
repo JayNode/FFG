@@ -17,8 +17,41 @@ nav {
 .nav-menu ul {
   display: flex;
   padding: 0;
+}
 
-  @media screen and (max-width: 768px) {
+.nav-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #1b3532;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+
+  &:hover {
+    background-color: #de9151;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu ul {
     position: absolute;
     top: 60px;
     left: 0;
@@ -29,60 +62,28 @@ nav {
     border-top: 1px solid black;
     display: none;
   }
-}
 
-@media screen and (max-width: 768px) {
   .nav-menu.expanded ul {
     display: block;
   }
-}
 
-.nav-menu li {
-  list-style-type: none;
-  margin: 0 1rem;
-
-  @media screen and (max-width: 768px) {
+  .nav-menu li {
     text-align: center;
     margin: 0;
 
     &:hover {
-      background-color: #eee;
+      background-color: ;
     }
   }
-}
 
-.nav-menu li a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-
-  @media screen and (max-width: 768px) {
+  .nav-menu li a {
     color: black;
     width: 100%;
     padding: 1.5rem 0;
   }
-}
 
-.hamburger {
-  border: 0;
-  height: 40px;
-  width: 40px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: #283b8b;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  transform: translateY(-50%);
-  display: none;
-
-  & :hover {
-    background-color: #2642af;
-  }
-
-  @media screen and (max-width: 768px) {
+  .hamburger {
     display: block;
   }
+  
 }
