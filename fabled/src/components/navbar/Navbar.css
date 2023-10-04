@@ -32,7 +32,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .navigation-menu.expanded ul {
+  .nav-menu.expanded ul {
     display: block;
   }
 }
