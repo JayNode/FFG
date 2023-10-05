@@ -13,7 +13,9 @@ const Navbar = () => {
                       n==Even -> setIsNavExpanded(false) */}
         <button className="hamburger" onClick={() => {
           setIsNavExpanded(!isNavExpanded);
-        }}></button>
+        }}>
+          <h1>Menu</h1>
+        </button>
 
         {/* Logic:  isNavExpanded==true  -> className="nav-menu expanded"  
                     isNavExpanded==false -> className="nav-menu" */}
@@ -21,15 +23,19 @@ const Navbar = () => {
           <ul>
             <li>
               <a href="/home">Home</a>
+              <hr/>
             </li>
             <li>
               <a href="/catalog">Catalog</a>
+              <hr/>
             </li>
             <li>
               <a href="/about">About</a>
+              <hr/>
             </li>
             <li>
               <a href="/donate">Donate</a>
+              <hr/>
             </li>
           </ul>
         </div>
