@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+}
+
+.header img {
+    height: 300px;
+}
+
+.content {
+    display: flex;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.section-one {
+    background-color: #E5EBE7;
+}
+
+.section-two {
+    background-color: #C7D1CB;
+}
+
+.section-three {
+    background-color: #E5EBE7;
+}
