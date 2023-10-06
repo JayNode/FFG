@@ -1,9 +1,25 @@
 .header {
     display: flex;
+    position: relative;
 }
 
 .header img {
-    height: 300px;
+    width: 100%;
+}
+
+.content-body {
+    position: absolute;
+    width: 100%;
+
+    @media screen and (max-width: 600px) {
+        top: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    position: absolute;
+    width: 100%;
+    top: 20%;
 }
 
 .content {

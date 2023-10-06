@@ -1,13 +1,14 @@
 import React from "react";
 import "./home.css"
-import headerImg from '../images/header.png'
+import yetiNatureHeader from '../images/header/TinyTree-Header.jpg'
 
 const Home = () => {
   return (
     <div className="Home">
       <div className="header">
-        <img src={headerImg} alt="Header Img" />
+        <img src={yetiNatureHeader} alt="Header Img" />
       </div>
+      
       <div className="content-body">
         <div className="content section-one">
           <h1>Heading</h1>
