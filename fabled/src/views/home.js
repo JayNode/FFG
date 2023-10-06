@@ -1,12 +1,13 @@
 import React from "react";
+import Carousel from "../components/carousel/Carousel.js";
 import "./home.css"
-import yetiNatureHeader from '../images/header/TinyTree-Header.jpg'
+
 
 const Home = () => {
   return (
     <div className="Home">
       <div className="header">
-        <img src={yetiNatureHeader} alt="Header Img" />
+        <Carousel />
       </div>
       
       <div className="content-body">

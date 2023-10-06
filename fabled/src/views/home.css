@@ -10,6 +10,7 @@
 .content-body {
     position: absolute;
     width: 100%;
+    top: 90%;
 
     @media screen and (max-width: 600px) {
         top: 400px;
