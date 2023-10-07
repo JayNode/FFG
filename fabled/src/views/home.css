@@ -1,24 +1,28 @@
 .content-body {
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
+  top: 30rem;
+
+  @media (min-width: 1200px) {
     top: 40rem;
+  }
 }
 
 .content {
-    display: flex;
-    height: 300px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  height: 300px;
+  margin: 0;
+  padding: 0;
 }
 
 .section-one {
-    background-color: #E5EBE7;
+  background-color: #e5ebe7;
 }
 
 .section-two {
-    background-color: #C7D1CB;
+  background-color: #c7d1cb;
 }
 
 .section-three {
-    background-color: #E5EBE7;
+  background-color: #e5ebe7;
 }
