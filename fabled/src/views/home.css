@@ -1,28 +1,24 @@
-.content-body {
-  position: absolute;
-  width: 100%;
-  top: 30rem;
-
-  @media (min-width: 1200px) {
-    top: 40rem;
-  }
+.Container {
 }
 
-.content {
-  display: flex;
+.Stack-Home {
+  background-color: gray;
+  text-align: center;
+  color: white;
+}
+
+.Stack-Home .content {
   height: 300px;
-  margin: 0;
-  padding: 0;
 }
 
-.section-one {
-  background-color: #e5ebe7;
+.Stack-Home .section1 {
+  background-color: white;
 }
 
-.section-two {
-  background-color: #c7d1cb;
+.Stack-Home .section2 {
+  background-color: gray;
 }
 
-.section-three {
-  background-color: #e5ebe7;
+.Stack-Home .section3 {
+  background-color: white;
 }

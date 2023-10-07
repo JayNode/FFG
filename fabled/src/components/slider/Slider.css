@@ -4,8 +4,6 @@
   left: 0;
   width: 100%;
   opacity: 0;
-  /* transform: translateX(-50%);
-  transition: all 0.5s ease; */
 }
 
 @media screen and (min-width: 600px) {

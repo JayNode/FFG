@@ -1,5 +1,5 @@
-import React from "react";
-import "./itemCard.css";
+import * as React from "react";
+import "./ItemCard.css";
 
 const ItemCard = () => {
   return <div className="ItemCard"></div>;
