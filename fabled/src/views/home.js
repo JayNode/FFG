@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "../components/carousel/Carousel.js";
+import Slider from "../components/slider/Slider.js";
 import "./home.css"
 
 
@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="header">
-        <Carousel />
+        <Slider />
       </div>
       
       <div className="content-body">
