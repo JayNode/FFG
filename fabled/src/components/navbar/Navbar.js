@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
+
 import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
@@ -9,10 +12,8 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
-import { Link } from "react-router-dom";
 
 const pages = ['Home', 'Catalog', 'About', 'Donate'];
-const links = ['/home', '/catalog', '/about', '/donate'];
 
 const Navbar = () => {
 
@@ -27,59 +28,80 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar sx={{height: 70, position: "static"}}>
-      <Container>
-        <Toolbar>
+    <AppBar sx={{height: 70, backgroundColor: 'white', position: "static"}}>
+      <Toolbar>
 
-          {/* Nav Links */}
-          <Box className="navlinks">
+        {/* Nav Links */}
+        <Box className="navlinks">
+          {pages.map((pages) => (
+            <MenuItem key={pages}>
+              <Typography textAlign="center">
+                <Link to={`/${pages}`} className="link">
+                  {pages}
+                </Link>
+              </Typography>
+            </MenuItem>
+          ))}
+        </Box>
+
+        {/* Dropdown Links */}
+        <Box className="dropdown">  
+          <IconButton className="dropdown-button" onClick={handleOpenNavMenu} >
+            {/* <Menu 
+              id="menu-dropdown"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: '',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+            >
+              {pages.map((pages) => (
+                <MenuItem key={pages} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">
+                    <Link to={`/${pages}`} className="droplink">
+                      {pages}
+                    </Link>
+                  </Typography>
+                </MenuItem>
+              ))}
+            </Menu> */}
+            <Typography className='dropdown-title'>Menu</Typography>
+          </IconButton>
+
+          <Menu 
+            id="menu-dropdown"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: '',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+          >
             {pages.map((pages) => (
-              <MenuItem key={pages}>
+              <MenuItem key={pages} onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">
-                  <Link to={`/${pages}`} className="link">
+                  <Link to={`/${pages}`} className="droplink">
                     {pages}
                   </Link>
                 </Typography>
               </MenuItem>
             ))}
-          </Box>
-
-                
-          <Box className="dropdown">
-              <Tooltip title="Open Dropdown">
-                <IconButton onClick={handleOpenNavMenu} sx={{ p: 0 }}>
-                  <button>Menu</button>
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: '45px' }}
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-              >
-                {pages.map((pages) => (
-                  <MenuItem key={pages} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">
-                      <Link to={`/${pages}`} className="droplink">
-                        {pages}
-                      </Link>
-                    </Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-        </Toolbar>
-      </Container>
+          </Menu>
+        </Box>
+      </Toolbar>
     </AppBar>
   );
 }

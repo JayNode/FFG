@@ -1,3 +1,9 @@
+.MuiMenuItem-root:disabled {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+/* Navigation */
 .navlinks {
   display: flex;
   margin: 0;
@@ -17,12 +23,48 @@
   }
 }
 
+/* Navigation dropdown */
 .dropdown {
+  background-color: #de9151;
+  border-radius: 50% / 120%;
+  width: 110px;
+  height: 40px;
+  margin: 13px 0 0 0;
   display: none;
+
+  &:hover {
+    & .dropdown-title {
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    & .dropdown-button {
+      width: 110px;
+    }
+  }
 }
 
+.dropdown-title {
+  display: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-dropdown {
+  margin: 13px 0 0 0;
+}
+
+.droplink {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Dropdown display parameters */
 @media screen and (max-width: 600px) {
-  .link {
+  .navlinks {
     display: none;
   }
 
