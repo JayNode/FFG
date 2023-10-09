@@ -1,8 +1,3 @@
-.MuiMenuItem-root:disabled {
-  cursor: not-allowed;
-  pointer-events: auto;
-}
-
 /* Navigation */
 .navlinks {
   display: flex;
@@ -24,36 +19,25 @@
 }
 
 /* Navigation dropdown */
-.dropdown {
-  background-color: #de9151;
+.dropdown { 
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 15px;
+}
+
+#dropdown-header {
   border-radius: 50% / 120%;
-  width: 110px;
-  height: 40px;
-  margin: 13px 0 0 0;
-  display: none;
-
-  &:hover {
-    & .dropdown-title {
-      display: block;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    & .dropdown-button {
-      width: 110px;
-    }
-  }
+  font-size: 22px;
 }
 
-.dropdown-title {
-  display: none;
-  color: black;
-  padding: 0;
-  margin: 0;
-}
+/* .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+  transform: rotate(90deg);
+} */
 
-#menu-dropdown {
-  margin: 13px 0 0 0;
+#dropdown-text {
+  text-align: left;
+  font-size: 20px;
 }
 
 .droplink {
@@ -64,12 +48,12 @@
 
 /* Dropdown display parameters */
 @media screen and (max-width: 600px) {
-  .navlinks {
-    display: none;
-  }
-
   .dropdown {
     display: block;
+  }
+
+  .navlinks {
+    display: none;
   }
 }
 

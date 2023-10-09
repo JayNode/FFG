@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import AppBar from '@mui/material/AppBar';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -17,16 +20,12 @@ const pages = ['Home', 'Catalog', 'About', 'Donate'];
 
 const Navbar = () => {
 
-  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [expanded, setExpanded] = useState('panel');
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
   };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
+    
   return (
     <AppBar sx={{height: 70, backgroundColor: 'white', position: "static"}}>
       <Toolbar>
@@ -46,60 +45,20 @@ const Navbar = () => {
 
         {/* Dropdown Links */}
         <Box className="dropdown">  
-          <IconButton className="dropdown-button" onClick={handleOpenNavMenu} >
-            {/* <Menu 
-              id="menu-dropdown"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: '',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-            >
+          <Accordion id='accordian' expanded={expanded === 'panel'} onChange={handleChange('panel')}>
+            <AccordionSummary id="dropdown-header">
+              <Typography>Menu</Typography>
+            </AccordionSummary>
+            <AccordionDetails id=''>
               {pages.map((pages) => (
-                <MenuItem key={pages} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <Link to={`/${pages}`} className="droplink">
-                      {pages}
-                    </Link>
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-            <Typography className='dropdown-title'>Menu</Typography>
-          </IconButton>
-
-          <Menu 
-            id="menu-dropdown"
-            anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: '',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            open={Boolean(anchorElNav)}
-            onClose={handleCloseNavMenu}
-          >
-            {pages.map((pages) => (
-              <MenuItem key={pages} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
+                <Typography id='dropdown-text' textAlign="left">
                   <Link to={`/${pages}`} className="droplink">
                     {pages}
                   </Link>
                 </Typography>
-              </MenuItem>
-            ))}
-          </Menu>
+              ))}
+            </AccordionDetails>
+          </Accordion>
         </Box>
       </Toolbar>
     </AppBar>
