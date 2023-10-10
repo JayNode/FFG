@@ -1,14 +1,16 @@
-.Container {
-}
-
 .Stack-Home {
   background-color: gray;
   text-align: center;
   color: white;
+  height: auto;
 }
 
-.Stack-Home .content {
+.Stack-Home .section-slider {
   height: 300px;
+}
+
+.content {
+  height: 500px;
 }
 
 .Stack-Home .section1 {

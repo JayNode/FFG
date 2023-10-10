@@ -3,113 +3,67 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 
-import AppBar from '@mui/material/AppBar';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Tooltip from '@mui/material/Tooltip';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Typography from '@mui/material/Typography';
+import { AppBar } from '@mui/material';
+import { Accordion } from '@mui/material';
+import { AccordionDetails } from '@mui/material';
+import { AccordionSummary } from '@mui/material';
+import { Container } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { Typography } from '@mui/material';
 
 const pages = ['Home', 'Catalog', 'About', 'Donate'];
 
+
+
 const Navbar = () => {
 
-  const [expanded, setExpanded] = useState('panel');
+  const [expanded, setExpanded] = useState(0);
 
-  const handleChange = (panel) => (event, newExpanded) => {
+  const handleChange = (panel) => (_event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
     
   return (
-    <AppBar sx={{height: 70, backgroundColor: 'white', position: "static"}}>
+    <AppBar id="navbar">
       <Toolbar>
 
-        {/* Nav Links */}
-        <Box className="navlinks">
+        {/* Tab Links */}
+        <Container disableGutters={true} id="tabs">
           {pages.map((pages) => (
-            <MenuItem key={pages}>
-              <Typography textAlign="center">
-                <Link to={`/${pages}`} className="link">
-                  {pages}
-                </Link>
-              </Typography>
-            </MenuItem>
+            <Link to={`/${pages}`} id="tab-link" className="link">
+              {pages}
+            </Link>     
           ))}
-        </Box>
+        </Container>
 
         {/* Dropdown Links */}
-        <Box className="dropdown">  
-          <Accordion id='accordian' expanded={expanded === 'panel'} onChange={handleChange('panel')}>
-            <AccordionSummary id="dropdown-header">
-              <Typography>Menu</Typography>
+        <Container id="dropdown">  
+          <Accordion 
+            disableGutters={true} 
+            expanded={expanded === 'panel'} 
+            onChange={handleChange('panel')}
+          >
+            <AccordionSummary>
+              <Typography id="drop-header">
+                Menu
+              </Typography>
             </AccordionSummary>
-            <AccordionDetails id=''>
+
+            <AccordionDetails>
               {pages.map((pages) => (
-                <Typography id='dropdown-text' textAlign="left">
-                  <Link to={`/${pages}`} className="droplink">
+                <Typography id="drop-menu">
+                  <Link to={`/${pages}`} id="drop-link" className="link">
                     {pages}
                   </Link>
                 </Typography>
               ))}
             </AccordionDetails>
           </Accordion>
-        </Box>
+        </Container>
+        
       </Toolbar>
+      <Toolbar/>
     </AppBar>
   );
 }
 export default Navbar;
-
-// import { useState } from 'react';
-// import "./Navbar.css";
-
-// const Navbar = () => {
-//   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
-//   return (
-//     <>
-//       <nav>
-
-//         {/* onClick:  n==0    -> setIsNavExpanded(false)
-//                       n==Odd  -> setIsNavExpanded(true) 
-//                       n==Even -> setIsNavExpanded(false) */}
-//         <button className="hamburger" onClick={() => {
-//           setIsNavExpanded(!isNavExpanded);
-//         }}>
-//           <h1>Menu</h1>
-//         </button>
-
-//         {/* Logic:  isNavExpanded==true  -> className="nav-menu expanded"  
-//                     isNavExpanded==false -> className="nav-menu" */}
-//         <div className={isNavExpanded ? "nav-menu expanded" : "nav-menu"}>
-//           <ul>
-//             <li>
-//               <a href="/home">Home</a>
-//               <hr/>
-//             </li>
-//             <li>
-//               <a href="/catalog">Catalog</a>
-//               <hr/>
-//             </li>
-//             <li>
-//               <a href="/about">About</a>
-//               <hr/>
-//             </li>
-//             <li>
-//               <a href="/donate">Donate</a>
-//               <hr/>
-//             </li>
-//           </ul>
-//         </div>
-//       </nav>
-//     </>
-//   );
-// };
-
-// export default Navbar;

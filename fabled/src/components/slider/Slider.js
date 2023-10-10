@@ -4,6 +4,8 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { sliderData } from "./Slider-data";
 import "./Slider.css";
 
+import { Container } from '@mui/material';
+
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideLength = sliderData.length;
@@ -43,9 +45,7 @@ const Slider = () => {
   });
 
   return (
-    <div className="slider">
-      <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-      <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+    <div id="slider">
 
       {sliderData.map((slide, index) => {
         return (
@@ -54,9 +54,10 @@ const Slider = () => {
             key={index}
           >
             {index === currentSlide && (
-              <div>
+              <div >
                 <img src={slide.image} alt="slide" />
-
+                <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
+                <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
                 <div className="slide-content">
                   <h2>{slide.heading}</h2>
                   <p>{slide.desc}</p>
