@@ -5,14 +5,12 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <div className="Home">
-      <Stack className="Stack-Home">
-        <Slider className="section-slider"/>
-        <div className="content section1">Content 1</div>
-        <div className="content section2">Content 2</div>
-        <div className="content section3">Content 3</div>
-      </Stack>
-    </div>
+    <Stack className="Home">
+      <Slider className="section-slider"/>
+      <div className="content section1">Content 1</div>
+      <div className="content section2">Content 2</div>
+      <div className="content section3">Content 3</div>
+    </Stack>
   );
 };
 

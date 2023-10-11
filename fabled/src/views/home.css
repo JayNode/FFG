@@ -1,26 +1,26 @@
-.Stack-Home {
+.Home {
   background-color: gray;
-  text-align: center;
   color: white;
   height: auto;
 }
 
-.Stack-Home .section-slider {
-  height: 300px;
+.section-slider {
+  height: 200px;
+  overflow: hidden;
 }
 
 .content {
-  height: 500px;
+  height: 400px;
 }
 
-.Stack-Home .section1 {
+.section1 {
   background-color: white;
 }
 
-.Stack-Home .section2 {
+.section2 {
   background-color: gray;
 }
 
-.Stack-Home .section3 {
+.section3 {
   background-color: white;
 }

@@ -8,32 +8,32 @@ import Img6 from "../../images/header/TinyTree-Header.jpg";
 export const sliderData = [
   {
     image: Img1,
-    heading: "Forest",
-    desc: "",
+    heading: "Forest Ecosystem",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
   },
   {
     image: Img2,
-    heading: "Flower",
-    desc: "",
+    heading: "Native Plants",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
   },
   {
     image: Img3,
-    heading: "Island",
-    desc: "",
+    heading: "Island Life",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
   },
   {
     image: Img4,
-    heading: "Lake",
-    desc: "",
+    heading: "Lakes",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
   },
   {
     image: Img5,
     heading: "Mountains",
-    desc: "",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
   },
   {
     image: Img6,
-    heading: "Tree",
-    desc: "",
+    heading: "Forest Life",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
   },
 ];
