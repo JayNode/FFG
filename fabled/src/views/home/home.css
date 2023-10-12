@@ -7,11 +7,8 @@
   color: black;
 }
 
-.section1 img{
-  width: 110px;
-}
-
-#s1A-content {
+/* SECTION 1 -> home-s1.js */
+#sect1-intro {
   margin: 150px 0 100px 50px;
 
   & h1 {
@@ -38,16 +35,20 @@
   }
 }
 
-#s1B-divider {
+#sect1-categories {
+  margin: 100px 50px 100px 0;
+}
+
+.sect1-img {
+  width: 110px;
+}
+
+.sect1-divider {
   margin-bottom: 30px;
 }
 
-.s1B-button {
+.sect1-button {
   margin: 0 0 20px 100px;
-}
-
-#s1B-content {
-  margin: 100px 50px 100px 0;
 }
 
 .enviro-summary {
@@ -56,10 +57,26 @@
   }
 }
 
+/* SECTION 2 -> home-s2.js */
 .section2 {
-  background-color: gray;
+  background-color: lightgray;
+  padding: 100px;
 }
 
+.news-container {
+  width: 300px;
+
+  & h1 {
+    font-size: 25px;
+  }
+}
+
+.news-img {
+  width: 300px;
+  height: 300px;
+}
+
+/* SECTION 3 -> home-s3.js */
 .section3 {
   background-color: white;
 }

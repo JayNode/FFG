@@ -6,16 +6,14 @@ import scroll from "../.././images/sticker/scroll-sticker.png";
 
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 
 const SectOne = () => {
   return (
     <Stack className="content section1" direction="row">
       <Container>
-        <div id="s1A-content">
-          <h1>Fabled Fieldguide</h1>
+        <div id="sect1-intro">
+          <h1>FABLED FEILDGUIDE</h1>
           <h2>Who we are</h2>
           <hr />
           <p>
@@ -28,15 +26,13 @@ const SectOne = () => {
       </Container>
 
       <Container>
-        <div id="s1B-content">
+        <div id="sect1-categories">
           <Stack direction="row" alignItems="center" spacing={10} >
-            <div>
-              <img id="s1-bigfoot" src={bigfoot} alt="bigfoot" />
-            </div>
+            <img className="sect1-img" src={bigfoot} alt="bigfoot" />
             <div>
               <Stack direction="row" justifyContent="space-between" spacing={1}>
                 <h1>Beasts</h1>
-                <div className="s1B-button">
+                <div className="sect1-button">
                   <Button variant="outlined">Catalog</Button>
                 </div>
               </Stack>
@@ -47,16 +43,14 @@ const SectOne = () => {
             </div>
           </Stack>
 
-          <hr id="s1B-divider"/>
+          <hr className="sect1-divider"/>
 
           <Stack direction="row" alignItems="center" spacing={10} >
-            <div>
-              <img id="s1-cave" src={cave} alt="cave" />
-            </div>
+            <img className="sect1-img" src={cave} alt="cave" />
             <div>
               <Stack direction="row" justifyContent="space-between" spacing={1} >
                 <h1>Environment</h1>
-                <div className="s1B-button">
+                <div className="sect1-button">
                   <Button variant="outlined">Habitats</Button>
                 </div>
               </Stack>
@@ -67,16 +61,14 @@ const SectOne = () => {
             </div>
           </Stack>
 
-          <hr id="s1B-divider"/>
+          <hr className="sect1-divider"/>
 
           <Stack direction="row" alignItems="center" spacing={10} >
-            <div>
-              <img id="s1-scroll" src={scroll} alt="scroll" />
-            </div>
+            <img className="sect1-img" src={scroll} alt="scroll" />
             <div>
               <Stack direction="row" justifyContent="space-between" spacing={1} >
                 <h1>Fieldguide</h1>
-                <div className="s1B-button">
+                <div className="sect1-button">
                   <Button variant="outlined">Adventure</Button>
                 </div>
               </Stack>
