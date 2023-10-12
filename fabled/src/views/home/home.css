@@ -1,0 +1,65 @@
+#Home {
+  background-color: white;
+  font-family: Roboto;
+}
+
+.content {
+  color: black;
+}
+
+.section1 img{
+  width: 110px;
+}
+
+#s1A-content {
+  margin: 150px 0 100px 50px;
+
+  & h1 {
+    font-size: 65px; 
+    font-weight: 500;
+    margin: 0 0 100px 50px;
+  }
+
+  & h2 {
+    font-size: 32px; 
+    margin: 0 0 0 30px;
+  }
+
+  & hr { 
+    border: 1.5px solid black;
+    width: 130px;
+    margin: 0 0 20px 30px;
+  }
+
+  & p { 
+    font-size: 19px; 
+    line-height: 1.3;
+    width: 85%;
+  }
+}
+
+#s1B-divider {
+  margin-bottom: 30px;
+}
+
+.s1B-button {
+  margin: 0 0 20px 100px;
+}
+
+#s1B-content {
+  margin: 100px 50px 100px 0;
+}
+
+.enviro-summary {
+  & hr {
+    width: 120px;
+  }
+}
+
+.section2 {
+  background-color: gray;
+}
+
+.section3 {
+  background-color: white;
+}

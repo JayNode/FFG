@@ -71,6 +71,7 @@
   cursor: pointer;
 }
 
+/* WIDTH < 900px */ 
 @media screen and (max-width: 900px) {
   .slide-content {
     bottom: 20%;
@@ -78,7 +79,7 @@
   }
 }
 
-/* Small Screen width */
+/* WIDTH < 600px */
 @media screen and (max-width: 600px) {
   .slide-content {
     width: 170px;

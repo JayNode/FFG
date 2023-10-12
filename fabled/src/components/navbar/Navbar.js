@@ -13,8 +13,6 @@ import { Typography } from '@mui/material';
 
 const pages = ['Home', 'Catalog', 'About', 'Donate'];
 
-
-
 const Navbar = () => {
 
   const [expanded, setExpanded] = useState(0);

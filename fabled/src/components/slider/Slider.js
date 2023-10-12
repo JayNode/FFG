@@ -10,7 +10,8 @@ const Slider = () => {
   // slideLength = 1 2 3
   // currentSlide = 0 1 2
 
-  const autoScroll = true;
+  //change autoScroll = false; to stop auto slide change
+  const autoScroll = false;
   let slideInterval;
   let intervalTime = 60000;
 

@@ -1,6 +1,6 @@
 /* Universal navigation properties */
 #navbar {
-  position: fixed;
+  position: static;
   display: flex;
   text-align: center;
   padding: 7px 0 0 0;
