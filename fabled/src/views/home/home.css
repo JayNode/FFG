@@ -60,44 +60,37 @@
 /* SECTION 2 -> home-s2.js */
 .section2 {
   background-color: lightgray;
-  padding: 100px;
-  overflow: hidden;
+  padding: 100px 0 100px 0;
 }
 
 .news-container {
-
+  width: 350px;
 }
 
 .news-link-title h1 {
-  font-size: 25px;
-  
-  /* @media screen and (max-width: 1200px) {
-    font-size: 23px;
-  }
-  @media screen and (max-width: 1000px) {
-    font-size: 20px;
-  } */
+  font-size: 20px;
+  margin: 8px 0 0 0;
+}
+
+.news-container p {
+  width: 90%;
+  margin: 10px 0 0 0;
 }
 
 .news-img {
   aspect-ratio: 1;
   width: 100%;
-  max-width: 375px;
-  min-width: 200px;
 }
-/* 
+
 @media screen and (max-width: 900px) {
+  .news-container {
+    min-width: 550px;
+    padding: 50px 0 50px 0;
+  }  
   .news-img {
-    min-width: 200px;
+    width: 250px;
   }
 }
-
-@media screen and (max-width: 730px) {
-  .section2 {
-    direction: column;
-  }
-} */
-
 
 /* SECTION 3 -> home-s3.js */
 .section3 {
