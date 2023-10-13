@@ -12,24 +12,24 @@
   margin: 150px 0 100px 50px;
 
   & h1 {
-    font-size: 65px; 
+    font-size: 65px;
     font-weight: 500;
     margin: 0 0 100px 50px;
   }
 
   & h2 {
-    font-size: 32px; 
+    font-size: 32px;
     margin: 0 0 0 30px;
   }
 
-  & hr { 
+  & hr {
     border: 1.5px solid black;
     width: 130px;
     margin: 0 0 20px 30px;
   }
 
-  & p { 
-    font-size: 19px; 
+  & p {
+    font-size: 19px;
     line-height: 1.3;
     width: 85%;
   }
@@ -60,11 +60,11 @@
 /* SECTION 2 -> home-s2.js */
 .section2 {
   background-color: lightgray;
-  padding: 100px 0 100px 0;
+  padding: 100px;
 }
 
 .news-container {
-  width: 350px;
+  width: 300px;
 }
 
 .news-link-title h1 {
@@ -72,21 +72,15 @@
   margin: 8px 0 0 0;
 }
 
-.news-container p {
-  width: 90%;
-  margin: 10px 0 0 0;
-}
-
 .news-img {
   aspect-ratio: 1;
-  width: 100%;
+  width: 300px;
 }
 
 @media screen and (max-width: 900px) {
   .news-container {
-    min-width: 550px;
     padding: 50px 0 50px 0;
-  }  
+  }
   .news-img {
     width: 250px;
   }
