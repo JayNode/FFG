@@ -61,20 +61,43 @@
 .section2 {
   background-color: lightgray;
   padding: 100px;
+  overflow: hidden;
 }
 
 .news-container {
-  width: 300px;
 
-  & h1 {
-    font-size: 25px;
+}
+
+.news-link-title h1 {
+  font-size: 25px;
+  
+  /* @media screen and (max-width: 1200px) {
+    font-size: 23px;
   }
+  @media screen and (max-width: 1000px) {
+    font-size: 20px;
+  } */
 }
 
 .news-img {
-  width: 300px;
-  height: 300px;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 375px;
+  min-width: 200px;
 }
+/* 
+@media screen and (max-width: 900px) {
+  .news-img {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .section2 {
+    direction: column;
+  }
+} */
+
 
 /* SECTION 3 -> home-s3.js */
 .section3 {
