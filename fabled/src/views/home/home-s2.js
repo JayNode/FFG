@@ -7,11 +7,11 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 
-const SectTwo = () => {
+const NewsArticles = () => {
   return (
-    <div className="content" id="section2">
+    <div className="content" id="news">
       <Container>
-        <div className="sect2-header">
+        <div className="news-header">
           <h1>News Stories</h1>
         </div>
         <Grid
@@ -75,4 +75,4 @@ const SectTwo = () => {
   );
 };
 
-export default SectTwo;
+export default NewsArticles;

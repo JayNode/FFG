@@ -1,43 +1,43 @@
+/*** All SECTIONS ***/
+.content {
+  color: black;
+}
+.heading {
+  font-size: 50px;
+  margin: 0 0 70px 40px;
+}
+.heading-line {
+  border: 5px solid #de9151;
+  width: 100px;
+  margin: 0 0 5px 10px;
+}
+.heading-paragraph {
+  font-size: 21px;
+  line-height: 1.4;
+  margin: 0;
+}
+
 /** HOME -> home.js **/
 #Home {
   background-color: #f7fcfd;
   font-family: Roboto;
 }
 
-/** All SECTIONS **/
-.content {
-  color: black;
-}
-
-/** INTRODUCTION -> home-s1.js **/
+/*** INTRODUCTION -> home-s1.js ***/
 #introduction {
   padding: 50px 100px 50px 50px;
   flex-direction: row;
 }
-
-    /* Intro */
+/* Intro */
 #summary {
   flex-direction: row;
   margin: 0;
   padding: 80px 0 0 50px;
 }
-#summary-heading {
-  font-size: 50px;
-  margin: 0 0 35px 40px;
-}
-#summary-line {
-  border: 5px solid #de9151;
-  width: 100px;
-  margin: 0 0 5px 10px;
-}
-#summary-paragraph {
-  font-size: 21px;
-  line-height: 1.4;
+#summary p {
   width: 80%;
-  margin: 0;
 }
-
-    /* Topics */
+/* Topics */
 #topics {
   margin: 0;
   padding: 0;
@@ -52,8 +52,7 @@
   margin: 30px 0;
   border: 1px solid black;
 }
-
-    /* Width < 1100px */
+/* Width < 1100px */
 @media screen and (max-width: 1100px) {
   #introduction {
     flex-direction: column;
@@ -72,8 +71,8 @@
   }
 }
 
-/** SECTION 2 -> home-s2.js **/
-#section2 {
+/*** SECTION 2 -> home-s2.js ***/
+#news {
   padding: 70px 0;
   background-color: #ecebe7;
 }
@@ -101,7 +100,7 @@
   width: 60px;
   z-index: 9999;
 }
-
+/* Width < 900px */
 @media screen and (max-width: 900px) {
   .news-container {
     padding: 50px 0 50px 0;
@@ -111,7 +110,29 @@
   }
 }
 
-/* SECTION 3 -> home-s3.js */
-.section3 {
+/*** SECTION 3 -> home-s3.js ***/
+#mission-statement {
   background-color: white;
+  padding: 100px 0;
+}
+/* Goal */
+#goal {
+}
+/* Grid */
+.goal-links {
+  text-decoration: none;
+  color: black;
+}
+.goal-items {
+  border-bottom: 3px solid transparent;
+  &:hover {
+    border-bottom: 3px solid #de9151;
+  }
+}
+.goal-imgs {
+}
+.goal-topics {
+  margin: 0;
+  padding: 10px;
+  font-size: 22px;
 }
