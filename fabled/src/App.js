@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
+import BottomNav from "./components/bottomNav/bottomNav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./views/home/home";
 import Creatures from "./views/creatures/creatures";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/donate" element={<Donate />} />
       </Routes>
+      <BottomNav />
     </Router>
   );
 }

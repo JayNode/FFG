@@ -1,0 +1,39 @@
+#BottomNavigation {
+  background-color: #CCDEDE;
+  margin: 0;
+  padding: 20px 15%;
+}
+#logo {
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+#title {
+  margin: 5px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+#address p{
+  margin: 0;
+  padding: 1px;
+}
+#socialMedia {
+  margin: 0;
+  padding: 0;
+}
+#social-header {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+.social-icons {
+  margin: 0 5px;
+  padding: 0;
+  height: 50px;
+}
+#instagram {
+  height: 40px;
+}
+#facebook {
+  height: 60px;
+}
