@@ -1,90 +1,91 @@
-/* HOME -> home.js */
+/** HOME -> home.js **/
 #Home {
   background-color: #f7fcfd;
   font-family: Roboto;
 }
 
+/** All SECTIONS **/
 .content {
   color: black;
 }
 
-/* SECTION 1 -> home-s1.js */
+/** INTRODUCTION -> home-s1.js **/
+#introduction {
+  padding: 50px 100px 50px 50px;
+  flex-direction: row;
+}
 
-#sect1-title {
+    /* Intro */
+#summary {
+  flex-direction: row;
   margin: 0;
-  padding: 30px 0 40px 200px;
-
-  & h1 {
-    font-size: 65px;
-    font-weight: 500;
-    margin: 0;
-  }
+  padding: 80px 0 0 50px;
 }
-
-.section1 {
-  padding: 100px;
-  margin: 0 200px;
+#summary-heading {
+  font-size: 50px;
+  margin: 0 0 35px 40px;
 }
-
-#sect1-intro {
+#summary-line {
+  border: 5px solid #de9151;
+  width: 100px;
+  margin: 0 0 5px 10px;
+}
+#summary-paragraph {
+  font-size: 21px;
+  line-height: 1.4;
+  width: 80%;
   margin: 0;
-  padding: 60px 0 0 50px;
-
-  & h2 {
-    font-size: 50px;
-    margin: 0 0 35px 40px;
-  }
-
-  & hr {
-    border: 5px solid #de9151;
-    width: 100px;
-    margin: 0 0 5px 10px;
-  }
-
-  & p {
-    font-size: 21px;
-    line-height: 1.4;
-    width: 70%;
-    margin: 0;
-  }
 }
 
-#intro-bttn {
-  margin: 70px 0 0 100px;
-  width: 200px;
-}
-
-#sect1-categories {
+    /* Topics */
+#topics {
   margin: 0;
-  padding: 0 50px 0 0;
+  padding: 0;
 }
-
-.sect1-img {
+.topics-img {
+  margin: 0;
+  padding: 0;
   width: 110px;
 }
-
-.sect1-divider {
+.topics-divider {
+  padding: 0;
   margin: 30px 0;
   border: 1px solid black;
 }
 
-/* SECTION 2 -> home-s2.js */
-.section2 {
+    /* Width < 1100px */
+@media screen and (max-width: 1100px) {
+  #introduction {
+    flex-direction: column;
+  }
+  #summary {
+    padding: 0 0 100px 0;
+  }
+  #summary-paragraph {
+    width: 100%;
+  }
+  #topics {
+    min-width: 630px;
+  }
+  .topics-divider {
+    margin: 20px 0 20px 0;
+  }
+}
+
+/** SECTION 2 -> home-s2.js **/
+#section2 {
   padding: 70px 0;
   background-color: #ecebe7;
 }
-
-.sect2-header {
+.s2-header {
   text-align: center;
   font-size: 27px;
   margin: 0 0 50px 0;
 }
-
 .news-link-title h1 {
   font-size: 25px;
   margin: 8px 0 0 0;
 }
-
 .news-img {
   position: relative;
   aspect-ratio: 1/1;
@@ -92,7 +93,6 @@
   margin: 0;
   z-index: 1;
 }
-
 .img-line {
   position: relative;
   border: 7px solid #de9151;

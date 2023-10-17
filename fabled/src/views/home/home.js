@@ -1,7 +1,7 @@
 import React from "react";
 
 import Slider from "../../components/slider/Slider.js";
-import SectionOne from "./home-s1";
+import Introduction from "./home-s1";
 import SectionTwo from "./home-s2.js";
 import SectionThree from "./home-s3.js";
 import "./home.css";
@@ -13,7 +13,7 @@ const Home = () => {
     <Stack id="Home">
 
       <Slider />
-      <SectionOne />
+      <Introduction />
       <SectionTwo />
       <SectionThree />
 

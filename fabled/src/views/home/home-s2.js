@@ -9,7 +9,7 @@ import Link from "@mui/material/Link";
 
 const SectTwo = () => {
   return (
-    <div className="content section2">
+    <div className="content" id="section2">
       <Container>
         <div className="sect2-header">
           <h1>News Stories</h1>
