@@ -1,4 +1,5 @@
 import React from "react";
+import "../.././components/scrollbar/scrollbar.css";
 
 import Slider from "../../components/slider/Slider.js";
 import Introduction from "./home-s1";
@@ -10,7 +11,7 @@ import Stack from "@mui/material/Stack";
 
 const Home = () => {
   return (
-    <Stack id="Home">
+    <Stack className="scrollbar" id="Home">
       <Slider />
       <Introduction />
       <NewsArticles />
