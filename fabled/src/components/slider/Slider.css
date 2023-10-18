@@ -4,7 +4,7 @@
 
 .slide img {
   aspect-ratio: 16/9;
-  max-height: 700px;
+  max-height: 600px;
   min-height: 350px;
   width: 100%;
 }

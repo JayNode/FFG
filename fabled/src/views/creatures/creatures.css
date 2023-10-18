@@ -1,0 +1,10 @@
+.Creatures {
+  margin: 0;
+  padding: 100px;
+  text-align: center;
+  background-color: #1b3532;
+  & h1 {
+    margin: 0 0 50px 0;
+    padding: 0;
+  }
+}

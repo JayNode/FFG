@@ -38,9 +38,11 @@ const Navbar = () => {
       {/* Navbar Content */}
       <Stack direction="row">
         {/** Navbar Logo */}
-        <Link to="/home">
-          <img id="navbar-logo" src={Logo} alt="logo" />
-        </Link>
+        <div id="logo-container">
+          <Link to="/home">
+            <img id="navbar-logo" src={Logo} alt="logo" />
+          </Link>
+        </div>
         {/** Navbar Links */}
         <Container className="links-padding">
           {pages.map((pages) => (
@@ -50,8 +52,13 @@ const Navbar = () => {
           ))}
         </Container>
         {/** Login Button */}
-        <Container id="login-bttn">
-          <Button onClick={handleOpen} variant="contained">
+        <Container id="login-container">
+          <Button
+            id="login-bttn"
+            onClick={handleOpen}
+            variant="contained"
+            disableElevation={true}
+          >
             Login
           </Button>
           <Dialog open={open} onClose={handleClose}>

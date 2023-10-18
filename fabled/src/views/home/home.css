@@ -25,7 +25,7 @@
 
 /*** INTRODUCTION -> home-s1.js ***/
 #introduction {
-  padding: 50px 100px 50px 50px;
+  padding: 150px 100px 150px 50px;
   flex-direction: row;
 }
 /* Intro */
@@ -74,7 +74,7 @@
 /*** SECTION 2 -> home-s2.js ***/
 #news {
   padding: 70px 0;
-  background-color: #ecebe7;
+  background-color: #e1eae7;
 }
 .s2-header {
   text-align: center;
