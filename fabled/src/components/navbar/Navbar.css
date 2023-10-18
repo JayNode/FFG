@@ -1,47 +1,46 @@
-/* Universal navigation properties */
+/* Global Navbar */
 #navbar {
   position: static;
-  display: flex;
-  text-align: center;
-  padding: 7px 0 0 0;
-  height: 80px; 
+  padding: 0 120px;
+  height: 80px;
   background-color: white;
 }
-.link {
+#navbar-logo {
+  padding-top: 16px;
+  width: 80px;
+}
+.links {
   text-decoration: none;
   color: black;
 }
-
-/* Login */
-#NavLogin {
-  background-color: white;
-  width: 70%;
-  height: 70%;
-  border-radius: 10px;
+.links-padding {
+  padding-top: 30px;
+  margin: 0 0 0 17px;
 }
 
-/* Navigation tabs */
-#tabs {
-  display: block;
-}
-#tab-link {
-  margin: 0 20px 0 20px;
+/* Navbar tabs */
+.nav-links {
+  margin: 0 10px;
   padding: 0 0 5px 0;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
   border-bottom: 3px solid transparent;
   &:hover {
     border-bottom: 3px solid #de9151;
   }
 }
+#login-bttn {
+  text-align: right;
+  padding: 20px;
+}
 
-/* Navigation dropdown */
-#dropdown { 
+/* Navbar dropdown */
+#dropdown {
   display: none;
   width: 30%;
   position: absolute;
-    top: 6px;
-    right: 0;
+  top: 6px;
+  right: 0;
 }
 #drop-header {
   font-size: 22px;
@@ -52,9 +51,7 @@
   font-size: 20px;
   margin: 0 0 10px 0;
 }
-
-/* Dropdown display parameters */
-/* Horizontal hide parameters */
+/* Width < 600 */
 @media screen and (max-width: 600px) {
   #dropdown {
     display: block;

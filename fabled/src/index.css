@@ -11,7 +11,7 @@ body {
   background-color: #1b3532;
   background-color: white;
 
-  &::-webkit-scrollbar {
+  /* &::-webkit-scrollbar {
     width: 17px;
   }
   &::-webkit-scrollbar-track {
@@ -26,7 +26,7 @@ body {
   }
   &::-webkit-scrollbar-thumb:hover {
     background: #2a3722;
-  }
+  } */
 }
 
 code {
