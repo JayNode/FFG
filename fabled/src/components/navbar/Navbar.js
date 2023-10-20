@@ -17,7 +17,14 @@ import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
-const pages = ["Creatures", "Habitats", "Fieldguide", "About", "Donate"];
+const pages = [
+  "Creatures",
+  "Habitats",
+  "Fieldguide",
+  "About",
+  "Donate",
+  "profile",
+];
 
 const Navbar = () => {
   const [expanded, setExpanded] = useState(0);
