@@ -9,7 +9,7 @@ import Habitats from "./views/habitats/habitats";
 import Fieldguide from "./views/fieldguide/fieldguide";
 import About from "./views/about/about";
 import Donate from "./views/donate/donate";
-import UserForm from "./views/user/userForm";
+import SignUp from "./views/user/signUp";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Route path="/fieldguide" element={<Fieldguide />} />
         <Route path="/about" element={<About />} />
         <Route path="/donate" element={<Donate />} />
-        <Route path="/userForm" element={<UserForm />} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
       <BottomNav />
     </Router>
