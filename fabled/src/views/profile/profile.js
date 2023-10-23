@@ -7,8 +7,7 @@ const Profile = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [selectData, setSelectData] = useState("");
-  const [selectValue, setSelectValue] = useState("");
+  const [selectData, setSelectData] = useState([]);
 
   useEffect(() => {
     let processing = true;
@@ -18,22 +17,9 @@ const Profile = () => {
     };
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!name || !username || !email || !password) {
-      setError(<p>Form is not complete</p>);
-    } else {
-      setError(" ");
-    }
-
-    setError(" ");
-    postData();
-  };
-
   const fetchData = async (processing) => {
     await axios
-      .get("localhost:4000/users")
+      .get("http://localhost:4000/users")
       .then((res) => {
         if (processing) {
           setSelectData(res.data);
@@ -51,8 +37,19 @@ const Profile = () => {
     };
 
     await axios
-      .post("http://localhost:4000/profile", postData)
+      .post("http://localhost:4000/newUser/send", postData)
       .then((res) => setError(<p className="success">{res.data}</p>));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name) {
+      setError(<p>Form is not complete</p>);
+    } else {
+      setError(" ");
+      postData();
+    }
   };
 
   return (

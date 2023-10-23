@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const schemas = require("../models/schemas");
 
-router.post("/user/:a", async (req, res) => {
+router.post("/newUser/:a", async (req, res) => {
   const { name, username, email, password } = req.body;
   const action = req.params.a;
 
@@ -31,12 +31,14 @@ router.post("/user/:a", async (req, res) => {
   res.end();
 });
 
-// router.get("/users", async (req, res) => {
-//   const user = schemas.User;
-//   const userData = await user.find({}).exec();
-//   if (userData) {
-//     res.send(JSON.stringify(userData));
-//   }
-// });
+router.get("/users", async (req, res) => {
+  const user = schemas.User;
+  const userData = await user.find({}).exec();
+  if (userData) {
+    res.send(JSON.stringify(userData));
+  }
+
+  res.send(userData);
+});
 
 module.exports = router;
