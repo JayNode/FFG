@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./userForm.css";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
 
-const Profile = () => {
+const NewUserForm = () => {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [selectData, setSelectData] = useState([]);
 
   useEffect(() => {
     let processing = true;
@@ -17,15 +21,8 @@ const Profile = () => {
     };
   }, []);
 
-  const fetchData = async (processing) => {
-    await axios
-      .get("http://localhost:4000/users")
-      .then((res) => {
-        if (processing) {
-          setSelectData(res.data);
-        }
-      })
-      .catch((err) => console.log(err));
+  const fetchData = async () => {
+    await axios.get("http://localhost:4000/users");
   };
 
   const postData = async () => {
@@ -44,8 +41,8 @@ const Profile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name) {
-      setError(<p>Form is not complete</p>);
+    if (!name || !username || !email || !password) {
+      setError(<p>Missing Fields</p>);
     } else {
       setError(" ");
       postData();
@@ -54,32 +51,48 @@ const Profile = () => {
 
   return (
     <div>
-      <form>
-        <label>Name</label>
-        <input
+      <Stack
+        id="textfield"
+        justifyContent="center"
+        alignItems="center"
+        spacing={3}
+      >
+        <h1>Fabled Fieldguide</h1>
+        <TextField
+          required
+          className="user-textfield name-field"
+          label="Full Name"
           type="name"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label>Username</label>
-        <input
+
+        <TextField
+          required
+          className="user-textfield username-field"
+          label="Username"
           type="username"
           name="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label>Email</label>
-        <input
+
+        <TextField
+          required
+          className="user-textfield email-field"
+          label="Email"
           type="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <label>Password</label>
-        <input
-          id="password"
+        <TextField
+          required
+          className="user-textfield password-field"
+          label="Password"
+          type="password"
           name="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -87,12 +100,17 @@ const Profile = () => {
 
         {error}
 
-        <button type="submit" onClick={handleSubmit}>
-          Submit
-        </button>
-      </form>
+        <Button
+          id="user-form-bttn"
+          type="submit"
+          variant="contained"
+          onClick={handleSubmit}
+        >
+          Sign Up
+        </Button>
+      </Stack>
     </div>
   );
 };
 
-export default Profile;
+export default NewUserForm;

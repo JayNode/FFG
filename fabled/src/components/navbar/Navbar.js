@@ -17,14 +17,7 @@ import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
-const pages = [
-  "Creatures",
-  "Habitats",
-  "Fieldguide",
-  "About",
-  "Donate",
-  "profile",
-];
+const pages = ["Creatures", "Habitats", "Fieldguide", "About", "Donate"];
 
 const Navbar = () => {
   const [expanded, setExpanded] = useState(0);
@@ -66,7 +59,7 @@ const Navbar = () => {
             variant="contained"
             disableElevation={true}
           >
-            Login
+            Log In
           </Button>
           <Dialog open={open} onClose={handleClose}>
             <LoginScreen />

@@ -1,0 +1,15 @@
+#textfield {
+  padding: 10%;
+}
+
+.user-textfield {
+  width: 100%;
+  max-width: 500px;
+}
+
+#user-form-bttn {
+  margin: 40px 0 0 0;
+  width: 30%;
+  max-width: 200px;
+  min-width: 100px;
+}

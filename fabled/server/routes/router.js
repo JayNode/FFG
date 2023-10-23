@@ -38,7 +38,7 @@ router.get("/users", async (req, res) => {
     res.send(JSON.stringify(userData));
   }
 
-  res.send(userData);
+  // res.send(userData);
 });
 
 module.exports = router;
