@@ -1,0 +1,90 @@
+:root {
+  --timing: 300ms;
+  --rotation: x 35deg;
+}
+
+#card {
+  place-content: center;
+  perspective: 1000px;
+}
+.c-img {
+  max-width: 100%;
+}
+.habitat-card {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  aspect-ratio: 13/9;
+  position: relative;
+  transition: rotate var(--timing) ease;
+}
+.habitat-card:hover {
+  rotate: x 35deg;
+}
+.habitat-card::before {
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  inset: 0;
+  height: auto;
+  z-index: 100;
+  background: black;
+  opacity: 0;
+}
+.habitat-card:hover::before {
+  opacity: 0.2;
+}
+.habitat-card::after {
+  content: "";
+  position: absolute;
+  inset: 1.5rem;
+  translate: 0 30px;
+  background: black;
+  filter: blur(1rem);
+  z-index: 2;
+  transition: translate var(--timing);
+}
+.habitat-card:hover::after {
+  /* rotate: x calc(var(--rotation) * -1); */
+  rotate: x 0deg;
+  translate: 0 50px;
+}
+.bg-img {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  object-fit: cover;
+  object-position: -8px center;
+  border: 3px solid white;
+  border-radius: 5px;
+  background-color: #071e22;
+}
+.logo,
+.front-img {
+  position: absolute;
+}
+.logo {
+  z-index: 1000;
+  filter: invert(1);
+  width: 50%;
+  margin-inline: auto;
+  inset: auto 0 1.5rem;
+  opacity: 0;
+  transform: translateY(0rem) translateZ(20px);
+  transition: var(--timing);
+}
+.habitat-card:hover .logo,
+.habitat-card:hover .front-img {
+  transform: translateY(-2rem) translateZ(20px);
+  rotate: x calc(var(--rotation) * -1);
+}
+.front-img {
+  scale: 1.25;
+  transform-origin: bottom;
+  opacity: 0;
+  z-index: 100;
+  transition: var(--timing);
+}
+.habitat-card:hover .front-img {
+  opacity: 1;
+}

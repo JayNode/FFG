@@ -8,8 +8,8 @@ import Stack from "@mui/material/Stack";
 
 const Creatures = () => {
   return (
-    <div className="Creatures">
-      <h1>Creature Catalog</h1>
+    <div id="Creatures">
+      <h1 id="catalog-title">Creature Catalog</h1>
       <Container>
         <ItemCard />
       </Container>

@@ -8,7 +8,6 @@ import Dragon from "../.././images/sticker/dragon-sticker.png";
 import Vampire from "../.././images/sticker/vampire-sticker.png";
 import Skeleton from "../.././images/sticker/skull-sticker.png";
 
-// import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import { Container } from "@mui/material";
