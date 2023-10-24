@@ -1,5 +1,5 @@
 import React from "react";
-import "./ItemCard2.css";
+import "./habitatCard.css";
 
 import Bigfoot from "../.././images/sticker/bigfoot-sticker.png";
 import Yeti from "../.././images/sticker/yeti-sticker.png";
@@ -15,9 +15,7 @@ import Wreck from "../.././images/sticker/wreck-sticker.png";
 
 import Bigfoot_Font from "../.././images/labels/bigfoot-label.png";
 
-import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
-import { Container } from "@mui/material";
 
 const CardData = [
   {
@@ -58,8 +56,8 @@ const ItemCard2 = () => {
         <Grid item id="card">
           <div id={`${CardData.name}-card`} className="habitat-card">
             <img className="logo c-img" src={CardData.label} alt="" />
-            <img className="front-img c-img" src={CardData.creature} alt="" />
-            <img className="bg-img" src={CardData.bg} />
+            {/* <img className="front-img c-img" src={CardData.creature} alt="" /> */}
+            <img className="bg-img c-img" src={CardData.creature} />
           </div>
         </Grid>
       ))}

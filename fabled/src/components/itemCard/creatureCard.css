@@ -1,0 +1,59 @@
+.habitat-card {
+  width: 350px;
+  border: 7px solid white;
+  border-radius: 10px;
+  background-color: #071e22;
+  aspect-ratio: 9/16;
+  position: relative;
+}
+.habitat-card::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  background: black;
+  filter: blur(1rem);
+  z-index: 10;
+}
+.label {
+  position: absolute;
+  max-width: 100%;
+  filter: invert(0.7);
+  z-index: 999;
+}
+.creature-img {
+  position: relative;
+  z-index: 1000;
+  max-width: 100%;
+  height: 100%;
+  transform-origin: right;
+}
+#Bigfoot-card {
+  scale: 0.9;
+  object-fit: cover;
+  object-position: 20px center;
+}
+#Yeti-card {
+  scale: 0.9;
+  object-fit: cover;
+  object-position: -50px 25px;
+}
+#Kraken-card {
+  scale: 0.9;
+  object-fit: cover;
+  object-position: -100px 30px;
+}
+#Dragon-card {
+  scale: 0.95;
+  object-fit: cover;
+  object-position: 50px center;
+}
+#Vampire-card {
+  scale: 0.85;
+  object-fit: cover;
+  object-position: -50px center;
+}
+#Skeleton-card {
+  scale: 0.85;
+  object-fit: cover;
+  object-position: -20px center;
+}

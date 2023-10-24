@@ -2,7 +2,7 @@ import React from "react";
 
 import "./habitats.css";
 
-import ItemCard2 from "../.././components/itemCard/ItemCard2";
+import ItemCard2 from "../.././components/itemCard/creatureCard";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 

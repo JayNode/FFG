@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --timing: 300ms;
   --rotation: x 35deg;
 }
@@ -45,7 +45,6 @@
   transition: translate var(--timing);
 }
 .habitat-card:hover::after {
-  /* rotate: x calc(var(--rotation) * -1); */
   rotate: x 0deg;
   translate: 0 50px;
 }
@@ -87,4 +86,4 @@
 }
 .habitat-card:hover .front-img {
   opacity: 1;
-}
+} */
