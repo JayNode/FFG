@@ -3,7 +3,7 @@
   border: 7px solid white;
   border-radius: 10px;
   background-color: #071e22;
-  aspect-ratio: 9/16;
+  aspect-ratio: 9/15;
   position: relative;
 }
 .habitat-card::after {
@@ -33,9 +33,9 @@
   object-position: 20px center;
 }
 #Yeti-card {
-  scale: 0.9;
+  scale: 0.95;
   object-fit: cover;
-  object-position: -50px 25px;
+  object-position: -40px 50px;
 }
 #Kraken-card {
   scale: 0.9;
