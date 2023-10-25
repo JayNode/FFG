@@ -5,9 +5,9 @@
   background-color: #1b3532;
 }
 
-#catalog-title {
-  margin: 0 0 50px 0;
+#creatures-title {
+  margin: 0 0 100px 0;
   padding: 0;
   color: white;
-  font-size: 40px;
+  max-width: 350px;
 }
