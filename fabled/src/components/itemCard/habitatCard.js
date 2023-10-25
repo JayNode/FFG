@@ -14,46 +14,40 @@ import Lake from "../.././images/sticker/lake-sticker.png";
 import Snowcave from "../.././images/sticker/snowcave-sticker.png";
 import Wreck from "../.././images/sticker/wreck-sticker.png";
 
-import Bigfoot_Label from "../.././images/labels/bigfoot-label.png";
-import Yeti_Label from "../.././images/labels/yeti-label.png";
-import Kraken_Label from "../.././images/labels/kraken-label.png";
-import Dragon_Label from "../.././images/labels/dragon-label.png";
-import Skeleton_Label from "../.././images/labels/skeleton-label.png";
-import Vampire_Label from "../.././images/labels/vampire-label.png";
+import Forest_Label from "../.././images/labels/forest-label.png";
+import Ocean_Label from "../.././images/labels/ocean-label.png";
+import Tundra_Label from "../.././images/labels/tundra-label.png";
+import Mountain_Label from "../.././images/labels/mountain-label.png";
 
 import Grid from "@mui/material/Grid";
 
 const CardData = [
   {
     id: "1",
-    name: "Bigfoot",
+    name: "Cave",
     text: "Filler Text Bigfoot",
-    label: Bigfoot_Label,
-    creature: Bigfoot,
-    bg: Cave,
+    label: Forest_Label,
+    habitat: Cave,
   },
   {
     id: "2",
-    name: "Kraken",
+    name: "Wreck",
     text: "FIller Text Kraken",
-    label: Kraken_Label,
-    creature: Kraken,
+    label: Ocean_Label,
     habitat: Wreck,
   },
   {
     id: "3",
-    name: "Yeti",
+    name: "Snowcave",
     text: "Filler Text Yeti",
-    label: Yeti_Label,
-    creature: Yeti,
+    label: Tundra_Label,
     habitat: Snowcave,
   },
   {
     id: "4",
-    name: "Dragon",
+    name: "Lake",
     text: "Filler Text Dragon",
-    label: Dragon_Label,
-    creature: Dragon,
+    label: Mountain_Label,
     habitat: Lake,
   },
   // {
@@ -81,8 +75,8 @@ const HabitatCard = () => {
             <div className="habitat-card">
               <img className="label" src={CardData.label} alt="" />
               <img
-                className={`${CardData.name}-img creature-img`}
-                src={CardData.creature}
+                className={`${CardData.name}-img habitat-img`}
+                src={CardData.habitat}
               />
             </div>
           </Link>

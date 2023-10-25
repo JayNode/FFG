@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 const Habitats = () => {
   return (
     <div id="Habitats">
-      <h1 id="catalog-title2">Creature Habitats</h1>
+      <h1 id="catalog-title2">Habitats</h1>
       <Container>
         <HabitatCard />
       </Container>
