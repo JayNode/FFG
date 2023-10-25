@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+/** Local Imports */
 import "./signUp.css";
+/** MUI Tags */
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 
 const NewUserForm = () => {

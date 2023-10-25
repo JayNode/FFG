@@ -1,0 +1,25 @@
+#info-header {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+}
+#donate-textfield {
+  width: 100%;
+  margin: 40px;
+  border: 1px solid #c7d1cb;
+  background-color: #fefefd; /* white -> red */
+}
+#textfield-header {
+  width: 100%;
+  text-align: left;
+}
+#donate-bttn {
+  width: 300px;
+  font-size: 30px;
+  background-color: #071e22; /* Rich Black */
+
+  &:hover {
+    background-color: #de9151; /* Persian Orange */
+    color: #071e22; /* Rich Black */
+  }
+}
