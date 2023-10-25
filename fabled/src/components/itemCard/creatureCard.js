@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./creatureCard.css";
 
 import Bigfoot from "../.././images/sticker/bigfoot-sticker.png";
@@ -71,23 +72,24 @@ const CardData = [
   // },
 ];
 
-const ItemCard2 = () => {
+const CreatureCard = () => {
   return (
     <Grid container justifyContent="center" spacing={7}>
       {CardData.map((CardData) => (
         <Grid item id="card">
-          <div className="habitat-card">
-            <img className="label" src={CardData.label} alt="" />
-            <img
-              id={`${CardData.name}-card`}
-              className="creature-img"
-              src={CardData.creature}
-            />
-          </div>
+          <Link>
+            <div className="creature-card">
+              <img className="label" src={CardData.label} alt="" />
+              <img
+                className={`${CardData.name}-img creature-img`}
+                src={CardData.creature}
+              />
+            </div>
+          </Link>
         </Grid>
       ))}
     </Grid>
   );
 };
 
-export default ItemCard2;
+export default CreatureCard;
