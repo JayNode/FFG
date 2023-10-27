@@ -21,7 +21,7 @@ import Dragon_Label from "../.././images/labels/dragon-label.png";
 import Skeleton_Label from "../.././images/labels/skeleton-label.png";
 import Vampire_Label from "../.././images/labels/vampire-label.png";
 
-import Grid from "@mui/material/Grid";
+import { Grid, Stack, Container, Box } from "@mui/material";
 
 const CardData = [
   {
@@ -41,14 +41,6 @@ const CardData = [
     habitat: Wreck,
   },
   {
-    id: "3",
-    name: "Yeti",
-    text: "Filler Text Yeti",
-    label: Yeti_Label,
-    creature: Yeti,
-    habitat: Snowcave,
-  },
-  {
     id: "4",
     name: "Dragon",
     text: "Filler Text Dragon",
@@ -56,6 +48,15 @@ const CardData = [
     creature: Dragon,
     habitat: Lake,
   },
+  {
+    id: "3",
+    name: "Yeti",
+    text: "Filler Text Yeti",
+    label: Yeti_Label,
+    creature: Yeti,
+    habitat: Snowcave,
+  },
+
   // {
   //   id: "5",
   //   name: "Vampire",
@@ -74,12 +75,13 @@ const CardData = [
 
 const CreatureCard = () => {
   return (
-    <Grid container justifyContent="center" spacing={7}>
+    <Grid container justifyContent="center" spacing={8}>
       {CardData.map((CardData) => (
         <Grid item id="card">
           <Link>
             <div className="creature-card">
               <img className="label" src={CardData.label} alt="" />
+
               <img
                 className={`${CardData.name}-img creature-img`}
                 src={CardData.creature}

@@ -35,16 +35,16 @@
   object-fit: cover;
 }
 .Bigfoot-img {
-  object-position: 90px center;
+  object-position: 90px 60px;
 }
 .Yeti-img {
-  object-position: 40px 45px;
+  object-position: 40px 100px;
 }
 .Kraken-img {
-  object-position: -20px 50px;
+  object-position: -20px 120px;
 }
 .Dragon-img {
-  object-position: 110px center;
+  object-position: 110px 70px;
 }
 .Vampire-img {
   object-position: -50px center;

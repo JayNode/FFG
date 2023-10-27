@@ -11,9 +11,9 @@ const Creatures = () => {
   return (
     <div id="Creatures">
       <img id="creatures-title" src={Header} alt="Header" />
-      <Container>
+      <div>
         <CreatureCard />
-      </Container>
+      </div>
     </div>
   );
 };
