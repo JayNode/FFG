@@ -1,6 +1,7 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-import "./Navbar.css";
+import ".././navbar/Navbar.css";
 
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -13,14 +14,33 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 const NavLogin = () => {
+  /** FIX THIS DATABASE LOGIN THINGY */
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let processing = true;
+    fetchData(processing);
+    return () => {
+      processing = false;
+    };
+  }, []);
+
   /** Change to database data */
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+
+    if (!email || !password) {
+      setError(<p>Missing Fields</p>);
+    } else {
+      setError(" ");
+    }
+  };
+
+  const fetchData = async () => {
+    await axios.get("http://localhost:4000/users");
   };
 
   return (
@@ -48,6 +68,7 @@ const NavLogin = () => {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
             margin="normal"
@@ -58,6 +79,7 @@ const NavLogin = () => {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={(e) => setPassword(e.target.value)}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}

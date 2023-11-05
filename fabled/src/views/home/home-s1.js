@@ -18,10 +18,9 @@ const Introduction = () => {
         <h2 className="heading">Who we are</h2>
         <hr className="heading-line" />
         <p className="heading-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Fabled Fieldguide is an environmental conservation organization that
+          uses a different approach to helping and learning about the
+          environment with the help of our creatures, and fieldguide.
         </p>
       </Container>
 
@@ -38,8 +37,9 @@ const Introduction = () => {
               </Button>
             </Stack>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Creatures are the guardians of their respective environments. They
+              will help guide you to learn, enjoy and help out in saving this
+              planet.
             </p>
           </div>
         </Stack>
@@ -58,8 +58,9 @@ const Introduction = () => {
               </Button>
             </Stack>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Environments are the domains that make up planet earth. There are
+              many different ways to help out, and learning about the
+              environment is just the first step.
             </p>
           </div>
         </Stack>
@@ -78,8 +79,9 @@ const Introduction = () => {
               </Button>
             </Stack>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              The fieldguide is used to keep track of your progress with helping
+              the environment. It will encompass the creatures, environment, and
+              ways you can help too.
             </p>
           </div>
         </Stack>

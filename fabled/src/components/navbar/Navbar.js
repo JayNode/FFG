@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 /** Local Files */
 import "./Navbar.css";
-import LoginScreen from "./NavLogin";
+import LoginScreen from ".././signIn/signIn";
 /** Local Images */
 import Logo from "../.././images/sticker/scroll-sticker.png";
 /** MUI Tags */

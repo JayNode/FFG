@@ -9,7 +9,7 @@ import Habitats from "./views/habitats/habitats";
 import Fieldguide from "./views/fieldguide/fieldguide";
 import About from "./views/about/about";
 import Donate from "./views/donate/donate";
-import SignUp from "./views/user/signUp";
+import SignUp from "./views/signUp/signUp";
 
 function App() {
   return (

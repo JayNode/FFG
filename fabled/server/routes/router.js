@@ -14,8 +14,10 @@ router.post("/newUser/:a", async (req, res) => {
         email: email,
         password: password,
       };
+
       const newUser = new schemas.User(userData);
       const saveUser = await newUser.save();
+
       if (saveUser) {
         res.send("New User Created!");
       } else {
@@ -37,8 +39,15 @@ router.get("/users", async (req, res) => {
   if (userData) {
     res.send(JSON.stringify(userData));
   }
+});
 
-  // res.send(userData);
+router.post("/login-users", async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email: email, password: password });
+  if (!user) {
+    return res.json({ error: "User not found" });
+  }
 });
 
 module.exports = router;
