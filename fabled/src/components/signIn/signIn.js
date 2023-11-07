@@ -14,14 +14,15 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 const NavLogin = () => {
-  /** FIX THIS DATABASE LOGIN THINGY */
+  /** FIX THIS DATABASE LOGIN THINGY!!!! */
+  const [user, setUser] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
     let processing = true;
-    fetchData(processing);
+    fetchData(processing).then((user) => setUser(user.data));
     return () => {
       processing = false;
     };
@@ -30,12 +31,12 @@ const NavLogin = () => {
   /** Change to database data */
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
 
     if (!email || !password) {
       setError(<p>Missing Fields</p>);
     } else {
       setError(" ");
+      fetchData(email).then((user) => setUser(user.data));
     }
   };
 
@@ -85,6 +86,7 @@ const NavLogin = () => {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+          {error}
           <Button
             type="submit"
             fullWidth
