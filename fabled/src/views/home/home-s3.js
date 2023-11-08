@@ -49,10 +49,12 @@ const MissionStatement = () => {
         <h1 className="heading">Mission</h1>
         <hr className="heading-line" />
         <p className="heading-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Fabled Fieldguides mission is to showcase an environmental
+          conservation organization that is more than a donation page. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.
         </p>
       </Container>
 

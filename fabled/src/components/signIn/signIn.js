@@ -41,7 +41,10 @@ const NavLogin = () => {
   };
 
   const fetchData = async () => {
-    await axios.get("http://localhost:4000/users");
+    await axios.get("http://localhost:4000/users").then((res) => {
+      setUser(res.data);
+      console.log(user);
+    });
   };
 
   return (
