@@ -78,7 +78,7 @@ const CreatureCard = () => {
     <Grid container justifyContent="center" spacing={8}>
       {CardData.map((CardData) => (
         <Grid item id="card">
-          <Link>
+          <Link key={CardData}>
             <div className="creature-card">
               <img className="label" src={CardData.label} alt="" />
 

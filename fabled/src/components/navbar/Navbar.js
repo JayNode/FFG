@@ -46,7 +46,7 @@ const Navbar = () => {
         {/** Navbar Links */}
         <Container className="links-padding">
           {pages.map((pages) => (
-            <Link className="nav-links links" to={`/${pages}`}>
+            <Link className="nav-links links" key={pages} to={`/${pages}`}>
               {pages}
             </Link>
           ))}

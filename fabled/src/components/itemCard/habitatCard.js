@@ -64,7 +64,7 @@ const HabitatCard = () => {
     <Grid container justifyContent="center" spacing={7}>
       {CardData.map((CardData) => (
         <Grid item>
-          <Link>
+          <Link key={CardData}>
             <div className="habitat-card">
               <img className="label" src={CardData.label} alt="" />
               <img

@@ -47,7 +47,7 @@ const NewUserForm = () => {
   };
 
   return (
-    <Container component="main" noValidate maxWidth="xs">
+    <Container id="signUp" component="main" noValidate maxWidth="xs">
       <Box
         noValidate
         sx={{
@@ -66,7 +66,6 @@ const NewUserForm = () => {
             name="name"
             className="user-textfield name-field"
             required
-            autoFocus
             fullWidth
             margin="normal"
             label="Full Name"
@@ -79,7 +78,6 @@ const NewUserForm = () => {
           <TextField
             margin="normal"
             required
-            autoFocus
             fullWidth
             className="user-textfield email-field"
             label="Email"
@@ -92,7 +90,6 @@ const NewUserForm = () => {
           <TextField
             margin="normal"
             required
-            autoFocus
             fullWidth
             className="user-textfield password-field"
             label="Password"

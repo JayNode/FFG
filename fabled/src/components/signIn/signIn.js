@@ -76,7 +76,6 @@ const NavLogin = () => {
           <TextField
             name="email"
             required
-            autoFocus
             fullWidth
             margin="normal"
             label="Email Address"
@@ -88,7 +87,6 @@ const NavLogin = () => {
           <TextField
             name="password"
             required
-            autoFocus
             fullWidth
             margin="normal"
             label="Password"
