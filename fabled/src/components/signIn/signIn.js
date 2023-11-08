@@ -22,11 +22,15 @@ const NavLogin = () => {
 
   useEffect(() => {
     let processing = true;
-    fetchData(processing).then((user) => setUser(user.data));
+    fetchData(processing);
     return () => {
       processing = false;
     };
   }, []);
+
+  const fetchData = async () => {
+    await axios.get("http://localhost:4000/users");
+  };
 
   /** Change to database data */
   const handleSubmit = (e) => {
@@ -36,16 +40,17 @@ const NavLogin = () => {
       setError(<p>Missing Fields</p>);
     } else {
       setError(" ");
-      fetchData(email).then((user) => setUser(user.data));
+      fetchData();
     }
   };
 
-  const fetchData = async () => {
-    await axios.get("http://localhost:4000/users");
-  };
-
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      component="main"
+      onSubmit={handleSubmit}
+      noValidate
+      maxWidth="xs"
+    >
       <Box
         noValidate
         sx={{
@@ -59,7 +64,7 @@ const NavLogin = () => {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box component="form" sx={{ mt: 1 }}>
           <TextField
             margin="normal"
             required
@@ -86,7 +91,6 @@ const NavLogin = () => {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          {error}
           <Button
             type="submit"
             fullWidth
