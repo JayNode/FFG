@@ -94,7 +94,7 @@ const NavLogin = () => {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          {error}
+
           <Button
             type="submit"
             fullWidth
