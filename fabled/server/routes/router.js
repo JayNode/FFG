@@ -2,29 +2,51 @@ const express = require("express");
 const router = express.Router();
 const schemas = require("../models/schemas");
 
-router.post("/newUser/:a", async (req, res) => {
-  const { name, username, email, password } = req.body;
+router.post("/userData/:a", async (req, res) => {
+  const { name, email, password } = req.body;
   const action = req.params.a;
+  const user = schemas.User;
 
   switch (action) {
     case "send":
       const userData = {
         name: name,
-        username: username,
         email: email,
         password: password,
       };
 
-      const newUser = new schemas.User(userData);
-      const saveUser = await newUser.save();
+      const newEmailExists = await user.findOne({ email: email });
 
-      if (saveUser) {
-        res.send("New User Created!");
+      if (!newEmailExists) {
+        const newUser = new user(userData);
+        const saveUser = await newUser.save();
+
+        if (saveUser) {
+          res.send("New User Created!");
+        } else {
+          res.send("Cannot create new user!");
+        }
       } else {
-        res.send("Cannot create new user!");
+        res.send("Email already in use");
       }
       break;
 
+    case "check":
+      const checkData = {
+        email: email,
+        password: password,
+      };
+
+      const emailExists = await user.findOne({ email: email });
+      const passwordExists = await user.findOne({ password: password });
+
+      if (emailExists && passwordExists) {
+        console.log("logged in");
+      } else {
+        console.log("email or password are incorrect");
+      }
+
+      break;
     default:
       res.send("Invalid Request");
       break;

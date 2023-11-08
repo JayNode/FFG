@@ -3,15 +3,17 @@ import axios from "axios";
 
 import ".././navbar/Navbar.css";
 
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import {
+  TextField,
+  Button,
+  Box,
+  Container,
+  Typography,
+  FormControlLabel,
+  Checkbox,
+  Grid,
+  Link,
+} from "@mui/material";
 
 const NavLogin = () => {
   /** FIX THIS DATABASE LOGIN THINGY!!!! */
@@ -36,24 +38,27 @@ const NavLogin = () => {
       setError(<p>Missing Fields</p>);
     } else {
       setError(" ");
-      fetchData();
+      postData();
     }
   };
 
   const fetchData = async () => {
-    await axios.get("http://localhost:4000/users").then((res) => {
-      setUser(res.data);
-      console.log(user);
-    });
+    await axios.get("http://localhost:4000/users");
+  };
+
+  const postData = async () => {
+    const postData = {
+      email: email,
+      password: password,
+    };
+
+    await axios
+      .post("http://localhost:4000/userData/check", postData)
+      .then((res) => setError(<p className="success">{res.data}</p>));
   };
 
   return (
-    <Container
-      component="main"
-      onSubmit={handleSubmit}
-      noValidate
-      maxWidth="xs"
-    >
+    <Container component="main" noValidate maxWidth="xs">
       <Box
         noValidate
         sx={{
@@ -69,25 +74,27 @@ const NavLogin = () => {
         </Typography>
         <Box component="form" sx={{ mt: 1 }}>
           <TextField
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
             name="email"
-            autoComplete="email"
+            required
             autoFocus
+            fullWidth
+            margin="normal"
+            label="Email Address"
+            type="Email"
+            autoComplete="email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
-            margin="normal"
-            required
-            fullWidth
             name="password"
+            required
+            autoFocus
+            fullWidth
+            margin="normal"
             label="Password"
             type="password"
-            id="password"
             autoComplete="current-password"
+            value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <FormControlLabel
@@ -100,6 +107,7 @@ const NavLogin = () => {
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
+            onClick={handleSubmit}
           >
             Sign In
           </Button>

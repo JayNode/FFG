@@ -3,13 +3,10 @@ import axios from "axios";
 /** Local Imports */
 import "./signUp.css";
 /** MUI Tags */
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
+import { TextField, Button, Box, Container, Typography } from "@mui/material";
 
 const NewUserForm = () => {
   const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -29,20 +26,19 @@ const NewUserForm = () => {
   const postData = async () => {
     const postData = {
       name: name,
-      username: username,
       email: email,
       password: password,
     };
 
     await axios
-      .post("http://localhost:4000/newUser/send", postData)
+      .post("http://localhost:4000/userData/send", postData)
       .then((res) => setError(<p className="success">{res.data}</p>));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !username || !email || !password) {
+    if (!name || !email || !password) {
       setError(<p>Missing Fields</p>);
     } else {
       setError(" ");
@@ -51,66 +47,75 @@ const NewUserForm = () => {
   };
 
   return (
-    <div>
-      <Stack
-        id="textfield"
-        justifyContent="center"
-        alignItems="center"
-        spacing={3}
+    <Container component="main" noValidate maxWidth="xs">
+      <Box
+        noValidate
+        sx={{
+          marginTop: 8,
+          marginBottom: 8,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
-        <h1>Fabled Fieldguide</h1>
-        <TextField
-          required
-          className="user-textfield name-field"
-          label="Full Name"
-          type="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <Typography component="h1" variant="h5">
+          Fabled Fieldguide
+        </Typography>
+        <Box component="form" sx={{ mt: 1 }}>
+          <TextField
+            name="name"
+            className="user-textfield name-field"
+            required
+            autoFocus
+            fullWidth
+            margin="normal"
+            label="Full Name"
+            autoComplete="name"
+            type="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        <TextField
-          required
-          className="user-textfield username-field"
-          label="Username"
-          type="username"
-          name="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+          <TextField
+            margin="normal"
+            required
+            autoFocus
+            fullWidth
+            className="user-textfield email-field"
+            label="Email"
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <TextField
-          required
-          className="user-textfield email-field"
-          label="Email"
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <TextField
+            margin="normal"
+            required
+            autoFocus
+            fullWidth
+            className="user-textfield password-field"
+            label="Password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-        <TextField
-          required
-          className="user-textfield password-field"
-          label="Password"
-          type="password"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          {error}
 
-        {error}
-
-        <Button
-          id="user-form-bttn"
-          type="submit"
-          variant="contained"
-          onClick={handleSubmit}
-        >
-          Sign Up
-        </Button>
-      </Stack>
-    </div>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            onClick={handleSubmit}
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Sign Up
+          </Button>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
