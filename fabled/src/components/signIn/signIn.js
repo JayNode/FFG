@@ -28,10 +28,6 @@ const NavLogin = () => {
     };
   }, []);
 
-  const fetchData = async () => {
-    await axios.get("http://localhost:4000/users");
-  };
-
   /** Change to database data */
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,6 +38,10 @@ const NavLogin = () => {
       setError(" ");
       fetchData();
     }
+  };
+
+  const fetchData = async () => {
+    await axios.get("http://localhost:4000/users");
   };
 
   return (
@@ -91,6 +91,7 @@ const NavLogin = () => {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
+          {error}
           <Button
             type="submit"
             fullWidth
