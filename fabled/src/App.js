@@ -23,7 +23,7 @@ function App() {
         <Route path="/fieldguide" element={<Fieldguide />} />
         <Route path="/about" element={<About />} />
         <Route path="/donate" element={<Donate />} />
-        <Route path="/signUp" element={<SignUp />} />
+        {/* <Route path="/signUp" element={<SignUp />} /> */}
       </Routes>
       <BottomNav />
     </Router>

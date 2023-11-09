@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 import ".././navbar/Navbar.css";
+import SignUpScreen from ".././signUp/signUp";
 
 import {
   TextField,
@@ -13,14 +14,26 @@ import {
   Checkbox,
   Grid,
   Link,
+  Dialog,
 } from "@mui/material";
 
 const NavLogin = () => {
   /** FIX THIS DATABASE LOGIN THINGY!!!! */
-  const [user, setUser] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [expanded, setExpanded] = useState(0);
+  const [open, setOpen] = useState(false);
+
+  const handleChange = (panel) => (_event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     let processing = true;
@@ -110,15 +123,20 @@ const NavLogin = () => {
             Sign In
           </Button>
           <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
             <Grid item>
-              <Link href="/signUp" variant="body2">
+              <Button
+                onClick={handleOpen}
+                variant="text"
+                disableElevation={true}
+              >
                 Don't have an account? Sign Up
-              </Link>
+              </Button>
+              <Dialog open={open} onClose={handleClose}>
+                <SignUpScreen />
+              </Dialog>
+              {/* <Link href="/signUp" variant="body2">
+                Don't have an account? Sign Up
+              </Link> */}
             </Grid>
           </Grid>
         </Box>
