@@ -113,6 +113,8 @@ const NavLogin = () => {
             label="Remember me"
           />
 
+          {error}
+
           <Button
             type="submit"
             fullWidth

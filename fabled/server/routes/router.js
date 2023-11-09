@@ -41,9 +41,9 @@ router.post("/userData/:a", async (req, res) => {
       const passwordExists = await user.findOne({ password: password });
 
       if (emailExists && passwordExists) {
-        console.log("logged in");
+        res.send("logged in");
       } else {
-        console.log("email or password are incorrect");
+        res.send("email and/or password are incorrect");
       }
 
       break;
