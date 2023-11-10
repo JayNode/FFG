@@ -3,7 +3,7 @@ const router = express.Router();
 const schemas = require("../models/schemas");
 
 router.post("/userData/:a", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, username, email, password, pfp } = req.body;
   const action = req.params.a;
   const user = schemas.User;
 
@@ -11,13 +11,16 @@ router.post("/userData/:a", async (req, res) => {
     case "send":
       const userData = {
         name: name,
+        username: username,
         email: email,
         password: password,
+        pfp: pfp,
       };
 
+      const newUsernameExists = await user.findOne({ username: username });
       const newEmailExists = await user.findOne({ email: email });
 
-      if (!newEmailExists) {
+      if (!newEmailExists || !newUsernameExists) {
         const newUser = new user(userData);
         const saveUser = await newUser.save();
 

@@ -7,6 +7,7 @@ import { TextField, Button, Box, Container, Typography } from "@mui/material";
 
 const NewUserForm = () => {
   const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -26,19 +27,20 @@ const NewUserForm = () => {
   const postData = async () => {
     const postData = {
       name: name,
+      username: username,
       email: email,
       password: password,
     };
 
     await axios
       .post("http://localhost:4000/userData/send", postData)
-      .then((res) => setError(<p className="success">{res.data}</p>));
+      .then((res) => setError(<p>{res.data}</p>));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password) {
+    if (!name || !username || !email || !password) {
       setError(<p>Missing Fields</p>);
     } else {
       setError(" ");
@@ -63,23 +65,29 @@ const NewUserForm = () => {
         </Typography>
         <Box component="form" sx={{ mt: 1 }}>
           <TextField
-            name="name"
-            className="user-textfield name-field"
-            required
-            fullWidth
             margin="normal"
+            fullWidth
+            required
             label="Full Name"
-            autoComplete="name"
+            name="name"
             type="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-
+          <TextField
+            margin="normal"
+            fullWidth
+            required
+            label="Username"
+            name="username"
+            type="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
           <TextField
             margin="normal"
             required
             fullWidth
-            className="user-textfield email-field"
             label="Email"
             type="email"
             name="email"
@@ -91,7 +99,6 @@ const NewUserForm = () => {
             margin="normal"
             required
             fullWidth
-            className="user-textfield password-field"
             label="Password"
             type="password"
             name="password"
