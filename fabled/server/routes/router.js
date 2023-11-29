@@ -35,10 +35,10 @@ router.post("/userData/:a", async (req, res) => {
       break;
 
     case "check":
-      const checkData = {
-        email: email,
-        password: password,
-      };
+      // const checkData = {
+      //   email: email,
+      //   password: password,
+      // };
 
       const emailExists = await user.findOne({ email: email });
       const passwordExists = await user.findOne({ password: password });
