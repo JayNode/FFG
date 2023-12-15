@@ -2,16 +2,18 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 /** Local Imports */
 import "./donate.css";
+import DonateImg from "../.././images/sticker/DonateImg.jpg";
 /** MUI Tags */
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import Divider from "@mui/material/Divider";
 
 const Donate = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [country, setCountry] = useState("");
+  const [country, setCost] = useState("");
   const [address, setAddress] = useState("");
   const [addressApt, setAddressApt] = useState("");
   const [city, setCity] = useState("");
@@ -42,13 +44,13 @@ const Donate = () => {
     <Stack id="Donate" direction="row">
       <div id="donate-info">
         <h1 id="info-header">Donate to FFG</h1>
-        <img src="" alt="" />
-        <p>
+        <img id="donate-img" src={DonateImg} alt="" />
+        {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
+        </p> */}
       </div>
       <div id="donate-textfield">
         <Stack
@@ -87,15 +89,6 @@ const Donate = () => {
           />
           <TextField
             required
-            className="user-textfield country-field"
-            label="Country"
-            type="country"
-            name="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          />
-          <TextField
-            required
             className="user-textfield address-field"
             label="Address"
             type="address"
@@ -103,14 +96,14 @@ const Donate = () => {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
           />
-          <TextField
+          {/* <TextField
             className="user-textfield addressApt-field"
             label="Apt., Ste., Bldg."
             type="addressApt"
             name="addressApt"
             value={addressApt}
             onChange={(e) => setAddressApt(e.target.value)}
-          />
+          /> */}
           <TextField
             required
             className="user-textfield city-field"
@@ -137,6 +130,15 @@ const Donate = () => {
             name="zipCode"
             value={zipCode}
             onChange={(e) => setZipCode(e.target.value)}
+          />
+          <TextField
+            required
+            className="user-textfield country-field"
+            label="Donation Amount"
+            type="cost"
+            name="cost"
+            value={country}
+            onChange={(e) => setCost(e.target.value)}
           />
 
           {error}

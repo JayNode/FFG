@@ -56,7 +56,6 @@ const CardData = [
     creature: Yeti,
     habitat: Snowcave,
   },
-
   // {
   //   id: "5",
   //   name: "Vampire",

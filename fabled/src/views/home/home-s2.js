@@ -31,10 +31,6 @@ const NewsArticles = () => {
               <Link className="news-link-title" href="" underline="hover">
                 <h1>Island resouces plummet after rise in tourism</h1>
               </Link>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
             </Grid>
           </Grid>
 
@@ -47,10 +43,6 @@ const NewsArticles = () => {
               <Link className="news-link-title" href="" underline="hover">
                 <h1> Leaves change color for first time in California </h1>
               </Link>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
             </Grid>
           </Grid>
 
@@ -63,10 +55,6 @@ const NewsArticles = () => {
               <Link className="news-link-title" href="" underline="hover">
                 <h1>Climber trapped, rescuers racing time</h1>
               </Link>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
             </Grid>
           </Grid>
         </Grid>

@@ -11,15 +11,24 @@
 }
 #textfield-header {
   width: 100%;
-  text-align: left;
+  text-align: center;
+  margin-top: 20px;
 }
 #donate-bttn {
   width: 300px;
   font-size: 30px;
   background-color: #071e22; /* Rich Black */
-
+  margin-bottom: 20px;
   &:hover {
     background-color: #de9151; /* Persian Orange */
     color: #071e22; /* Rich Black */
   }
+}
+.user-textfield {
+  width: 60%;
+}
+#donate-img {
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 500px;
 }

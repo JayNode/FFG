@@ -9,31 +9,31 @@ export const sliderData = [
   {
     image: Img1,
     heading: "Forest Ecosystem",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "",
   },
   {
     image: Img2,
     heading: "Native Plants",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "",
   },
   {
     image: Img3,
     heading: "Island Life",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "",
   },
   {
     image: Img4,
     heading: "Lakes",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "",
   },
   {
     image: Img5,
     heading: "Mountains",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "",
   },
   {
     image: Img6,
     heading: "Forest Life",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    desc: "",
   },
 ];
